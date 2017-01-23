@@ -1,0 +1,38 @@
+<!-- Bootstrap Navbar -->
+<nav class="navbar navbar-light bg-faded">
+  <div class="container">
+    <a class="navbar-brand" href="#">Mean Docker</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div [style.margin-top.px]="10" class="row">
+    <h3>Add new person</h3>
+    <form class="form-inline">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" #name>
+      </div>
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" class="form-control" id="age" #age>
+      </div>
+      <div class="form-group">
+        <label for="nickname">Nickname</label>
+        <input type="text" class="form-control" id="nickname" #nickname>
+      </div>
+      <div class="form-group">
+        <label for="role">Role</label>
+        <input type="text" class="form-control" id="role" #role>
+      </div>
+      <button type="button" (click)="addMember(name.value, age.value, nickname.value, role.value)" class="btn btn-primary">Add member</button>
+    </form>
+  </div>
+  <div [style.margin-top.px]="10" class="row">
+    <h3>People</h3>
+    <!-- Bootstrap Card -->
+    <div [style.margin-right.px]="10" class="card card-block col-md-3" *ngFor="let member of members">
+      <h4 class="card-title">{{member.name}}  {{member.age}} {{member.nickname}} {{member.role}}</h4>
+    </div>
+  </div>
+</div>
