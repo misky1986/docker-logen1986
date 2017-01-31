@@ -4,15 +4,21 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { MemberComponent } from './member/member.component';
+import { HallOfFameComponent } from './hall-of-fame/hall-of-fame.component';
+import {routes} from "./app.router";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MemberComponent,
+    HallOfFameComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routes
   ],
   providers: [],
   bootstrap: [AppComponent]
