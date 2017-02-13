@@ -3,6 +3,7 @@
 
 # Jetbrains
 .idea
+/**/*.iml
 
 # Node modules - Ignore all node_modules in this and all sub directories
 node_modules/

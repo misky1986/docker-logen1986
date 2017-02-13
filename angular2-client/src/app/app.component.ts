@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   title = 'app works!';
 
   // Link to our api, pointing to localhost
-  API = 'http://localhost:3000';
+  API = 'http://localhost:8080';
 
   // Declare empty list of members
   members: any[] = [];

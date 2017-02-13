@@ -11,10 +11,10 @@ services:
     ports:
       - "4200:4200"
 
-  express:
-    build: express-server
+  rest-backend:
+    build: rest-backend
     ports:
-      - "3000:3000"
+      - "8080:8080"
     links:
       - database # link this service to the database service
 
