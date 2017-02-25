@@ -18,6 +18,7 @@ export class AppComponent implements OnInit {
   // Declare empty list of members
   members: any[] = [];
 
+  // Angular2 dependency injection
   constructor(private http: Http) {}
 
   // Angular 2 Life Cycle event when component has been initialized
@@ -27,7 +28,7 @@ export class AppComponent implements OnInit {
 
   // Add one person to the API
   addMember(name, age, nickname, role) {
-    this.http.post(`${this.API}/members`, {name, age, nickname, role})
+    this.http.post(`${this.API}/members/create`, {name, age, nickname, role})
       .map(res => res.json())
       .subscribe(() => {
         this.getAllMember();
